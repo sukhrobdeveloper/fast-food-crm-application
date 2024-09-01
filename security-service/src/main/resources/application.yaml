@@ -1,6 +1,14 @@
 spring:
   application:
     name: security-service
+  data:
+    mongodb:
+      port: 27018
+      username: root_username
+      password: root_password
+      authentication-database: admin
+      host: localhost
+      database: fast-food-app
 
 eureka:
   client:
@@ -10,3 +18,20 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     hostname: localhost
+
+server:
+  port: 8082
+
+
+twilio:
+  account-sid: ${TWILIO_ACCOUNT_SID}
+  auth-token: ${TWILIO_AUTH_TOKEN}
+  phone-number: ${TWILIO_PHONE_NUMBER}
+
+auth:
+  codeLimit: 5
+  codeExpiration: 300000
+  jwt:
+    accessTokenLifeTime: 86400000
+    refreshTokenLifeTime: 172800000
+

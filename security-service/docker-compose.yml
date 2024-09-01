@@ -1,0 +1,24 @@
+services:
+  mongodb:
+    image: mongo
+    container_name: spring_security
+    ports:
+      - 27018:27017
+    volumes:
+      - mongo:/data
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root_username
+      - MONGO_INITDB_ROOT_PASSWORD=root_password
+  mongo-express:
+    image: mongo-express
+    container_name: express_spring_security
+    restart: always
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=root_username
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=root_password
+      - ME_CONFIG_MONGODB_SERVER=spring_security
+    ports:
+      - 8090:8081
+
+volumes:
+  mongo: {}
