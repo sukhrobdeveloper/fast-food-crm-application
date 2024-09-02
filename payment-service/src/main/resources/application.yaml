@@ -5,7 +5,7 @@ spring:
     password: root123
     username: postgres
     driver-class-name: org.postgresql.Driver
-    url: sss
+    url: jdbc:postgresql://localhost:5432/test-fast-food-payment
   jpa:
     hibernate:
       ddl-auto: update
