@@ -4,7 +4,7 @@ import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import sukhrob.developer.customer_service.entities.Category;
+import sukhrob.developer.customer_service.entities.products.Category;
 import sukhrob.developer.customer_service.payload.category.CategoryReqDTO;
 import sukhrob.developer.customer_service.payload.category.CategoryResDTO;
 import sukhrob.developer.customer_service.repositories.CategoryRepository;

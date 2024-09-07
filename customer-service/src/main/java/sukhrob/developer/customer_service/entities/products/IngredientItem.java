@@ -1,4 +1,4 @@
-package sukhrob.developer.customer_service.entities;
+package sukhrob.developer.customer_service.entities.products;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

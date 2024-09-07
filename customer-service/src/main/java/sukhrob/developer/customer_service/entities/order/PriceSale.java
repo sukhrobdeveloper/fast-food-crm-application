@@ -1,6 +1,5 @@
-package sukhrob.developer.customer_service.entities;
+package sukhrob.developer.customer_service.entities.order;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,22 +9,15 @@ import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 import sukhrob.developer.customer_service.entities.template.AbsEntity;
 
-import java.util.UUID;
-
+@Entity(name = "price_sales")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "categories")
-@SQLDelete(sql = "update categories set deletet=true where id=?")
+@SQLDelete(sql = "update price_sales set deleted=true where id = ?")
 @Where(clause = "deleted=false")
-public class Category extends AbsEntity {
+public class PriceSale extends AbsEntity {
 
-    @Column(unique = true, nullable = false)
-    private String name;
-
-    private String description;
-
-    private UUID parentId;
+    // sale
 
 }
